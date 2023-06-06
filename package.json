@@ -2,9 +2,11 @@
   "name": "wildberries-service",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gdrclm.github.io/Vue-main-cart",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build && gh-pages -d dist"
+    "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",

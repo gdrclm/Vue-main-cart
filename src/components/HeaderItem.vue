@@ -19,10 +19,7 @@ export default {
   border-radius: 0px 0px 15px 15px;
   display: flex;
   align-items: center;
-  top: -20%;
-  left: 0%;
-  overflow: hidden;
-  z-index: 0;
+
 
   span {
     font-size: 24px;
