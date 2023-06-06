@@ -1,6 +1,6 @@
 <template>
   <div class="cart-container">
-    <img width="392" :src="imgSrc" alt="img product" class="product-image" />
+    <img :src="imgSrc" alt="img product" class="product-image" />
 
     <div class="cart-title">
       <img class="cart-logo" :src="logoSrc" alt="logoSrc" />
@@ -116,13 +116,15 @@ export default {
   margin: auto 20px;
   margin-bottom: 20px;
 }
-.cart-container {
-  width: 392px;
-}
+
 .cart-container {
   background: #f5f8fe;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+
+.product-image {
+  width: 100%;
 }
 .cart-description {
   padding: 0 20px;
@@ -168,6 +170,12 @@ export default {
     span {
       color: #fff;
     }
+  }
+}
+@media (max-width: 415px) {
+  .product-image {
+    width: 100%;
+    height: -webkit-fill-available;
   }
 }
 </style>

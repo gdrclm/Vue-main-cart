@@ -53,11 +53,11 @@ export default {
 <style lang="scss" scoped>
 .aselect .selector {
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
-  padding: 0 50px;
-  border-right: 1px solid rgb(51, 51, 51);
+}
+.last-item .selector {
+  border: none;
 }
 .label,
 .arrow {
@@ -116,5 +116,21 @@ export default {
 }
 .aselect .visible {
   visibility: visible;
+}
+@media (max-width: 870px) {
+  .aselect .selector {
+    border: none;
+    border-right: none;
+  }
+}
+@media (max-width: 800px) {
+  .aselect .selector {
+    /* padding: 0 2vw; */
+  }
+}
+@media (max-width: 1280px) {
+  .aselect .selector {
+    /* padding: 0 4.6vw; */
+  }
 }
 </style>

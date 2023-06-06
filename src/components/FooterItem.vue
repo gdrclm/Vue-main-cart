@@ -21,9 +21,7 @@
         </form>
       </div>
       <div class="contact-to">
-        <div class="telephone">
-          <span>+7 707 950 90 26</span>
-        </div>
+        <a class="telephone" href="tel:+77079509026">+7 707 950 90 26</a>
         <a
           class="whatsApp-link"
           href="https://api.whatsapp.com/send?phone=910000000000&text=Hello this is the starting message"
@@ -55,6 +53,8 @@ export default {
   padding: 40px 0;
   margin: 0 auto;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 h2 {
   padding: 40px 50px auto;
@@ -136,6 +136,11 @@ h3 {
   line-height: 29px;
   margin-bottom: 15px;
   color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 .contact-to {
   display: flex;
@@ -155,6 +160,32 @@ h3 {
     line-height: 17px;
 
     color: #838383;
+  }
+}
+@media (max-width: 1281px) {
+  .footer-wrapper {
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .email-wrapper {
+    margin-bottom: 15px;
+  }
+  .text-block {
+    span {
+      text-align: center;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+  .contact-to {
+    align-items: center;
   }
 }
 </style>

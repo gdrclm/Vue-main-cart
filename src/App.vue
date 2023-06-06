@@ -37,8 +37,7 @@
         :logoSrc="require('./img/guru-logo.svg')"
         price="150"
       />
-    </div>
-    <div class="cart-item-wrapper">
+
       <cart-item
         :product="{
           name: 'Seller expert',
@@ -98,15 +97,29 @@ export default {
 };
 </script>
 <style lang="scss">
+div.selector:last-child {
+  border: none;
+}
 .container {
   margin: 0 auto;
   max-width: 1216px;
+  padding: 0 10px;
+  box-sizing: content-box;
 }
 .cart-item-wrapper {
-  display: flex;
   gap: 20px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1080px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 20px;
+  }
 }
 * {
   box-sizing: border-box;
@@ -169,5 +182,9 @@ progress {
 }
 .map-title {
   padding: 20px;
+}
+
+button {
+  cursor: pointer;
 }
 </style>

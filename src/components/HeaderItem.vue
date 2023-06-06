@@ -20,11 +20,20 @@ export default {
   display: flex;
   align-items: center;
 
-
   span {
     font-size: 24px;
     font-weight: 600;
     padding-left: 40px;
+  }
+}
+@media (max-width: 415px) {
+  .header-container {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    span {
+      padding-left: 0;
+    }
   }
 }
 </style>

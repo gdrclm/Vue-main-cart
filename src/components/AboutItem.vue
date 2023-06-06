@@ -22,6 +22,10 @@ export default {
   display: flex;
   gap: 20px;
   margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 .title-name {
   font-weight: 700;
@@ -43,7 +47,8 @@ export default {
     z-index: 1000;
   }
   img {
-    width: fit-content;
+    max-width: 100%;
+    height: -webkit-fill-available;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -69,5 +74,11 @@ export default {
   margin: 0 auto;
   margin-bottom: 50px;
   z-index: 1001;
+}
+@media (max-width: 415px) {
+  .img-wrapper img {
+    width: 100%;
+    height: -webkit-fill-available;
+  }
 }
 </style>

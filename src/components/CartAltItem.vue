@@ -67,9 +67,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cart-container {
+/* .cart-container {
   width: 392px;
-}
+} */
 .cart-title {
   display: flex;
   justify-content: center;
